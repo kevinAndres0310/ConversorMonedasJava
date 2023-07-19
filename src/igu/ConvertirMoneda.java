@@ -107,8 +107,11 @@ public class ConvertirMoneda extends javax.swing.JFrame {
             DolaresPesos dolarPeso = new DolaresPesos();
             Utilitario.regresarContinuar(dolarPeso, this);
         } else if (seleccion.equals("Dolares a Euros")) {
-            ConvertirTemperatura temp = new ConvertirTemperatura();
-            Utilitario.regresarContinuar(temp, this);
+            DolaresEuros dolarEuro = new DolaresEuros();
+            Utilitario.regresarContinuar(dolarEuro, this);
+        } else if (seleccion.equals("Dolares Pesos MXN")) {
+            DolaresPesosMxn dolarPesoMxn = new DolaresPesosMxn();
+            Utilitario.regresarContinuar(dolarPesoMxn, this);
         }
     }//GEN-LAST:event_btnConversionActionPerformed
 

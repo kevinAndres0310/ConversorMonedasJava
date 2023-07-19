@@ -4,14 +4,17 @@
  */
 package igu;
 
-import java.awt.TextField;
+import java.text.DecimalFormat;
 import javax.swing.JFrame;
+import javax.swing.JTextField;
 
 /**
  *
  * @author ITALTECH
  */
 public class Utilitario extends javax.swing.JFrame {
+
+    private Object formato;
 
     /**
      * Creates new form JframeUtilitario
@@ -50,9 +53,13 @@ public class Utilitario extends javax.swing.JFrame {
         frameClose.dispose();
     }
     
-    public static void calcularCambio(double valor, TextField textField1){
-        valor = Double.parseDouble(textField1.getText());
-    }
+    public static void agregarComa(double valor, JTextField resultado){
+        DecimalFormat formato = new DecimalFormat("#,###.##");
+        String cantidadFormateada = formato.format(valor);
+        resultado.setText("$" + cantidadFormateada);
+    }   
+    
+
     
     /**
      * @param args the command line arguments

@@ -10,12 +10,12 @@ import java.text.DecimalFormat;
  *
  * @author ITALTECH
  */
-public class DolaresPesos extends javax.swing.JFrame {
+public class DolaresEuros extends javax.swing.JFrame {
 
     /**
      * Creates new form DolaresPesos
      */
-    public DolaresPesos() {
+    public DolaresEuros() {
         initComponents();
         setLocationRelativeTo(null);
     }
@@ -61,7 +61,7 @@ public class DolaresPesos extends javax.swing.JFrame {
         jLabel1.setText("Ingrese los dolares para realizar el cambio: ");
 
         jLabel2.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
-        jLabel2.setText("Cantidad de pesos: ");
+        jLabel2.setText("Cantidad de Euros: ");
 
         textoResultado.setEditable(false);
         textoResultado.setText("$");
@@ -156,7 +156,7 @@ public class DolaresPesos extends javax.swing.JFrame {
 
     private void btnCambiarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCambiarActionPerformed
         double valor = Double.parseDouble(textoDolares.getText());
-        valor = valor * 522;
+        valor = valor * 0.89;
 
         Utilitario.agregarComa(valor, textoResultado);
     }//GEN-LAST:event_btnCambiarActionPerformed

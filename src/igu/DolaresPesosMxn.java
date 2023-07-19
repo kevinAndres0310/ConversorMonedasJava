@@ -10,12 +10,12 @@ import java.text.DecimalFormat;
  *
  * @author ITALTECH
  */
-public class DolaresPesos extends javax.swing.JFrame {
+public class DolaresPesosMxn extends javax.swing.JFrame {
 
     /**
      * Creates new form DolaresPesos
      */
-    public DolaresPesos() {
+    public DolaresPesosMxn() {
         initComponents();
         setLocationRelativeTo(null);
     }
@@ -61,7 +61,7 @@ public class DolaresPesos extends javax.swing.JFrame {
         jLabel1.setText("Ingrese los dolares para realizar el cambio: ");
 
         jLabel2.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
-        jLabel2.setText("Cantidad de pesos: ");
+        jLabel2.setText("Cantidad de pesos Mxn: ");
 
         textoResultado.setEditable(false);
         textoResultado.setText("$");
@@ -116,7 +116,7 @@ public class DolaresPesos extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(btnCambiar, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(limpiar, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(22, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -156,7 +156,7 @@ public class DolaresPesos extends javax.swing.JFrame {
 
     private void btnCambiarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCambiarActionPerformed
         double valor = Double.parseDouble(textoDolares.getText());
-        valor = valor * 522;
+        valor = valor * 16.72;
 
         Utilitario.agregarComa(valor, textoResultado);
     }//GEN-LAST:event_btnCambiarActionPerformed
